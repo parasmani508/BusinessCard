@@ -4,6 +4,7 @@ import { templatetwo } from './templates/templateTwo';
 import { templatethree } from './templates/templateThree';
 import { templatefour } from './templates/templateFour';
 import { templateFive } from './templates/templateFive';
+import { templateSix } from './templates/templateSix';
 import { BusinessCardData } from '@/types';
 
 import { toPng } from 'html-to-image';
@@ -21,6 +22,7 @@ const templates = [
   templatethree,
   templatefour,
   templateFive,
+  templateSix
   
 ];
 
