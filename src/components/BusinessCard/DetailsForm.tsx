@@ -5,14 +5,14 @@ import { templatethree } from './templates/templateThree';
 import { templatefour } from './templates/templateFour';
 import { templateFive } from './templates/templateFive';
 import { BusinessCardData } from '@/types';
-// import html2canvas from 'html2canvas';
+
 import { toPng } from 'html-to-image';
 
 // Define the dummy data
 const dummyData: BusinessCardData = {
   name: 'John Doe',
   phone: '(555) 123-4567',
-  address: '123 Business Ave',
+  address: 'H-No-123 Business Ave',
 };
 
 const templates = [
