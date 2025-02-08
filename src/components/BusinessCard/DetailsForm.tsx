@@ -5,6 +5,12 @@ import { templatethree } from './templates/templateThree';
 import { templatefour } from './templates/templateFour';
 import { templateFive } from './templates/templateFive';
 import { templateSix } from './templates/templateSix';
+import { templateSeven } from './templates/templateSeven';
+import { templateEight } from './templates/templateEight';
+import { templateNine } from './templates/templateNine';
+import { templateTen } from './templates/templateTen';
+import { templateEleven } from './templates/templateEleven';
+import { templateTwelve } from './templates/templateTwelve';
 import { BusinessCardData } from '@/types';
 
 import { toPng } from 'html-to-image';
@@ -22,7 +28,13 @@ const templates = [
   templatethree,
   templatefour,
   templateFive,
-  templateSix
+  templateSix,
+  templateSeven,
+  templateEight,
+  templateNine,
+  templateTen,
+  templateEleven,
+  templateTwelve
   
 ];
 
@@ -176,14 +188,6 @@ const BusinessCardGenerator: React.FC = () => {
         console.error('Error generating image:', error); // Handle errors
       });
   };
-
- 
-
- 
-
- 
- 
-
 
   return (
     <div className="max-w-6xl mx-auto p-4">

@@ -5,69 +5,65 @@ import { BusinessCardData } from '@/types';
 interface TemplateProps {
   data: BusinessCardData;
 }
-
 export const templatethree: React.FC<TemplateProps> = ({ data }) => (
-<div
-  className="w-96 h-56 rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300"
-  style={{
-    backgroundImage: `url('/images/image6.jpg')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }}
->
-  {/* Top Section - Name */}
-  <div className="h-1/3 flex items-center px-8 pt-6">
-    <h2 className="text-3xl font-bold text-white tracking-wide">{data.name}</h2>
-  </div>
-
-  {/* Bottom Section - Contact Details */}
-  <div className="h-2/3  px-8 py-6 space-y-4">
-    {/* Phone */}
-    <div className="flex items-center gap-4 group">
-      <div className="bg-[#D08E2D] p-2 rounded-lg">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          className="h-5 w-5 text-[#05354B]"
-          fill="none"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M21 3l-6 6m0 0V4m0 5h5M5 3a2 2 0 0 0-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 0 0 2-2v-3.28a1 1 0 0 0-.684-.948l-4.493-1.498a1 1 0 0 0-1.21.502l-1.13 2.257a11.042 11.042 0 0 1-5.516-5.516l2.257-1.13a1 1 0 0 0 .502-1.21L9.228 3.684A1 1 0 0 0 8.28 3H5z"
-          />
-        </svg>
-      </div>
-      <p className="text-white font-medium flex-1">{data.phone}</p>
+  <div
+    className="w-96 h-56 rounded-xl shadow-2xl relative overflow-hidden"
+    style={{
+      background: 'linear-gradient(120deg, #2c3e50, #3498db)',
+      boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
+    }}
+  >
+    {/* Geometric Patterns */}
+    <div className="absolute inset-0 opacity-10">
+      <div className="absolute top-0 right-0 w-40 h-40 rotate-45 bg-white/20" />
+      <div className="absolute bottom-0 left-0 w-32 h-32 -rotate-45 bg-white/20" />
     </div>
 
-    {/* Address */}
-    <div className="flex items-center gap-4 group">
-      <div className="bg-[#D08E2D] p-2 rounded-lg">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          className="h-5 w-5 text-[#05354B]"
-          fill="none"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0 1 9-9"
-          />
-        </svg>
+    {/* Content Wrapper */}
+    <div className="relative h-full p-6 flex flex-col">
+      {/* Header */}
+      <div className="mb-auto">
+       
+        <h2 className="text-2xl font-bold text-white tracking-wide">{data.name}</h2>
       </div>
-      <p className="text-white font-medium flex-1">{data.address}</p>
+
+      {/* Contact Info */}
+      <div className="space-y-3">
+        {/* Phone */}
+        <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-black/10 transition-colors group">
+          <div className="w-8 h-8 rounded-lg bg-white/20 flex-shrink-0 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="h-4 w-4 text-white"
+              fill="currentColor"
+            >
+              <path d="M6.62 10.79a15.055 15.055 0 006.59 6.59l2.2-2.2a1 1 0 011.17-.2 11.72 11.72 0 004.1.72 1 1 0 011 1v3.5a1 1 0 01-1 1A18 18 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.72 4.1 1 1 0 01-.2 1.17z" />
+            </svg>
+          </div>
+          <span className="text-white/90 font-medium">{data.phone}</span>
+        </div>
+
+        {/* Address */}
+        <div className="flex items-start gap-3 p-2 rounded-lg hover:bg-black/10 transition-colors group">
+          <div className="w-8 h-8 rounded-lg bg-white/20 flex-shrink-0 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="h-4 w-4 text-white"
+              fill="currentColor"
+            >
+              <path d="M12 2a7 7 0 00-7 7c0 5.25 7 12 7 12s7-6.75 7-12a7 7 0 00-7-7zm0 9a2 2 0 112-2 2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <span className="text-white/90 font-medium break-words flex-1 mt-1">{data.address}</span>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+);
 
 
 
 
 
-  );

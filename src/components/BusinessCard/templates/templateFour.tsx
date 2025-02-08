@@ -8,19 +8,19 @@ interface TemplateProps {
 
 export const templatefour: React.FC<TemplateProps> = ({ data }) => (
   <div
-  className="w-96 h-56 bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between relative border border-gray-200"
+  className="w-96 h-56 bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between relative"
   style={{
-    backgroundImage: `url('/images/image4.jpg')`,
+    backgroundImage: `url('/images/image12.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   }}
 >
   {/* Top Section */}
   <div className="flex justify-between items-center">
-    <h2 className="text-2xl font-bold text-gray-900">{data.name}
-      <div className="h-1 w-[180px] bg-gradient-to-r from-[#E3F4FC] to-[#84CFF6] rounded-full my-4"></div>
+    <h2 className="text-2xl font-bold text-[#e8b10daa]">{data.name}
+      <div className="h-1 w-[180px] bg-gradient-to-r from-[#ccbd7b] to-[#e8b10daa] rounded-full my-4"></div>
     </h2>
-    <div className="w-12 h-12 mb-8 rounded-full bg-[#84CFF6] flex items-center justify-center shadow">
+    <div className="w-12 h-12 mb-8 rounded-full bg-[#e8b10daa] flex items-center justify-center shadow">
       <span className="text-lg font-semibold text-gray-900">
         {data.name.charAt(0).toUpperCase()}
       </span>
@@ -28,8 +28,8 @@ export const templatefour: React.FC<TemplateProps> = ({ data }) => (
   </div>
 
   {/* Bottom Section */}
-  <div className="space-y-3 text-gray-700">
-    <p className="flex items-center gap-2 text-gray-900">
+  <div className="space-y-3 text-[#e8b10daa]">
+    <p className="flex items-center gap-2 text-[#e8b10daa]">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 flex-shrink-0" fill="none" stroke="currentColor">
         <path
           strokeLinecap="round"
@@ -40,7 +40,7 @@ export const templatefour: React.FC<TemplateProps> = ({ data }) => (
       </svg>
       <span className="leading-5 truncate">{data.phone}</span>
     </p>
-    <p className="flex items-start gap-2 text-gray-900">
+    <p className="flex items-start gap-2 text-[#e8b10daa]">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor">
         <path
           strokeLinecap="round"
@@ -49,10 +49,8 @@ export const templatefour: React.FC<TemplateProps> = ({ data }) => (
           d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0 1 9-9"
         />
       </svg>
-      <span className="leading-5 line-clamp-2">{data.address}</span>
+      <span className="leading-5 line-clamp-2 mt-0.5">{data.address}</span>
     </p>
   </div>
 </div>
-
-
 );

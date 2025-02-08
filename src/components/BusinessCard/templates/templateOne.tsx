@@ -12,7 +12,7 @@ interface TemplateProps {
 // Individual Template Components
 export const templateone: React.FC<TemplateProps> = ({ data }) => (
   <div
-  className="w-96 h-56 p-6 rounded-lg shadow-xl flex items-center justify-between border border-gray-300"
+  className="w-96 h-56 p-6 rounded-lg shadow-xl flex items-center justify-between"
   style={{
     backgroundImage: 'url(/images/image1.jpg)',
     backgroundSize: 'cover',
@@ -45,7 +45,7 @@ export const templateone: React.FC<TemplateProps> = ({ data }) => (
           d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0 1 9-9"
         />
       </svg>
-      <p className="text-sm text-gray-800 break-words">{data.address}</p>
+      <p className="text-sm text-gray-800 break-words mt-0.5">{data.address}</p>
     </div>
   </div>
 
